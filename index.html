@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       /* empezamos co el estilo del cuerpo  */
+       body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+       }
+
+       /* seguimos con la barra de navegacion */
+       .navbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(245, 118, 44);
+        padding: 15px;
+        width: 80%;
+        border-radius: 10px;
+       }
+
+       /* elementos en la barra de navegacion */
+
+       .navbar-item {
+        color: white;
+        text-decoration: dashed;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: rgb(231, 145, 206);
+        border: 5px rgb(46, 11, 143);
+        border-radius: 5px;
+        text-align: center;
+       }
+
+       /* diseño responsivo de la barra para pantallas pequeñas */
+
+       @media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .navbar-item {
+                margin: 10px 0; /* Añade espacio entre los elementos al apilarse */
+                width: 100%; /* Asegura que los enlaces ocupen el ancho completo de la barra */
+                box-sizing: border-box; /* Asegura que el padding y el borde se respeten dentro del ancho */
+            }
+        }
+
+ .galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  height: 80svh;
+  place-content: center;
+}
+
+    .galeria img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+          .galeria {
+            grid-template-columns: 1fr; /* Cambia a una columna */
+            grid-template-rows: auto; /* Ajusta el número de filas automáticamente */
+          }
+
+          .galeria img {
+            height: auto; /* Ajusta la altura de las imágenes para que no se distorsionen */
+          }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#home" class="navbar-item">Home</a>
+        <a href="#about" class="navbar-item">About</a>
+        <a href="#services" class="navbar-item">Services</a>
+        <a href="#contact" class="navbar-item">Contact</a>
+    </nav>
+
+    <div class="galeria">
+        <img src="Pinkfloyd.jpg" alt="Descripción de la imagen">
+        <img src="Kingglizzard.jpg" alt="Descripción de la imagen">
+        <img src="Vulfpeck.jpg" alt="Descripción de la imagen">
+        <img src="Nugenea.jpg" alt="Descripción de la imagen">
+       
+     
+    </div>
+
+</body>
+</html>
